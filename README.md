@@ -29,7 +29,7 @@ Running
 On linux and Mac just 
 
 ```bash
-HTTP_server.py
+./HTTP_server.py
 ```
 
 On windows
