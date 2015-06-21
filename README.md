@@ -15,13 +15,7 @@ Just copy the HTTP_server.py into the folder you have your static files.
 Configuration
 ------------------
 
-Open the script with your favorit editor and modify those parameters:
-
-* APPLICATION_SERVER = 'http://localhost:9091'
-* ROUTING_KEY_WORD = '/rest'
-
-**APPLICATION_SERVER** represent the entry point of the service you want to target
-**ROUTING_KEY_WORD** is the keyword in the URL that indicate to the script to forward to the application server
+All the configuration is done in command line. Just call the script with no parameter and you will get the help.
 
 Running
 ------------------
@@ -29,16 +23,19 @@ Running
 On linux and Mac just 
 
 ```bash
-./HTTP_server.py
+./HTTP_server.py -s http://localhost:9091 -r /rest/
 ```
 
 On windows
 ```bash
-python HTTP_server.py
+python HTTP_server.py -s http://localhost:9091 -r /rest/
 ```
 
 
-Improvement
+Improvement & Bug fix
 =============
 
-* Manage multiple entry point and multiple filter
+* Header were not sent and not sent back
+* code improvment to log more efficiently
+* command line parmeter management
+* TODO : Manage different source folder than the where the script is running
